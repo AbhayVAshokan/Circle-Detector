@@ -1,7 +1,8 @@
-let spinner = document.getElementById("spinner")
-
-document.body.classList.add("loading");
-
+// Function to render body once the opencv.js files are loaded.
 function loadContent() {
-	document.body.classList.remove("loading");
+	const loading = document.getElementsByClassName('loading')[0]
+	const content = document.getElementsByClassName('content')[0]
+
+	content.style.visibility = "visible"
+	loading.style.visibility = "hidden"
 }

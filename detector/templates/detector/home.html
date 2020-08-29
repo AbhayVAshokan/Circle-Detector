@@ -1,5 +1,13 @@
 {% extends 'detector/base.html' %}
 
 {% block content %}
-	<p>Home</p>
+	<div class="loading">
+		<div class="spinner spinner-border text-primary"></div>
+	<p class="caption">Loading opencv.js resources...</p>
+	</div>
+
+	<div class="content">
+		<h3>opencv.js successfully loaded...</h3>
+	</div>
+
 {% endblock content %}
