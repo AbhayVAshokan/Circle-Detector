@@ -1,13 +1,27 @@
 {% extends 'detector/base.html' %}
 
 {% block content %}
-	<div class="loading">
+	<div id="loading">
 		<div class="spinner spinner-border text-primary"></div>
-	<p class="caption">Loading opencv.js resources...</p>
+	<p id="caption">Loading opencv.js resources...</p>
 	</div>
 
-	<div class="content">
-		<h3>opencv.js successfully loaded...</h3>
-	</div>
+	<div id="content" class="">
+		<div class="input-group">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="input-group-file">Upload</span>
+		  </div>
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="input-file" aria-describedby="input-group-file">
+		    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+		  </div>
+		</div>
 
+		<div class="row">
+			<img id="input-image" class="img-fluid">
+			<canvas id="image-canvas"></canvas>
+		</div>
+
+		<button type="button" id="detect-button" class="btn btn-outline-primary">Detect Circles</button>
+	</div>
 {% endblock content %}

@@ -1,8 +1,8 @@
 /*Importing Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-.loading {
-  top: 50%;
+#loading {
+  top: 45%;
   left: 50%;
   position: fixed;
 }
@@ -13,12 +13,63 @@
   margin-left: -37.5px;
 }
 
-.caption {
+#caption {
 	margin-top: 30px;
 	transform: translate(-50%, -50%);
 	font-family: 'Raleway', sans-serif;
 }
 
-.content {
+#content {
+  padding: 5%;
+  display: flex;
+  overflow: hidden;
 	visibility: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.input-group {
+  padding-bottom: 2%;
+}
+
+#input-image {
+  padding: 5px;
+  max-width: 50%;
+  max-height: 100%;
+}
+
+#image-canvas {
+  padding: 5px;
+  max-width: 50%;
+  max-height: 100%;
+}
+
+#detect-button {
+  height: 50px;
+  width: 500px;
+  visibility: hidden;
+  margin-top: 20px;
+}
+
+@media (max-width:1000px)  {
+  .row {
+    width: 200%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #input-image: {
+    max-width: 100%;
+  }
+
+  #image-canvas: {
+    max-width: 100%;
+  }
+
+  #detect-button {
+    height: 40px;
+    width: 200px;
+  }
+}
+
